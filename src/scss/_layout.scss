@@ -27,31 +27,35 @@ main {
   // background: purple;
   // max-height: 100%;
   height: 30vw;
-  outline: 2px solid black;
+  height: 60vw;
 }
 
 .mainSection {
+  // border: 3px solid orange;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
+  height: 60vw;
   display: grid;
   grid-gap: 1rem;
 }
 //entire card object
+
 .projectCardContainer {
   position: relative;
   width: 25vw;
-  height: 4rem;
-  background: green;
-  padding: 1rem;
+  height: 20rem;
+  margin: 0 auto;
+  // background: green;
 }
 //inside layer that holds front and back sides of the card
+
 .Card {
   position: absolute;
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
   transition: all 0.5s ease;
-  // background: yellow;
+  background: yellow;
 }
 
 .Card:hover {
@@ -63,7 +67,7 @@ main {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  // background: grey;
+  background: grey;
   // border: 3px solid black;
 }
 
@@ -77,8 +81,13 @@ main {
 }
 
 header {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
 }
+
 // .photoContainer {
 //   display: grid;
 //   margin: auto;
@@ -93,12 +102,37 @@ header {
 // .photo:hover {
 //   border: 10px $bgNavy solid;
 // }
+
+
 /* ==========================================================================
    SMALLEST WINDOW
    ========================================================================== */
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 640px)  {
   .mainSection {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projectCardContainer {
+    position: relative;
+    width: 38vw;
+    height: 20rem;
+    margin: 0 auto;
+    // background: green;
+  }
+
+  @for $i from 1 through 22 {
+    li:nth-child(#{$i}) {
+      transform: translate(-50%, -50%) rotate(#{$i * 15 - 15}deg) translateY(-150px) rotateX(90deg);
+    }
+  }
+  @keyframes three-dimensions-circle {
+    0% {
+      transform: rotateX(-100deg) rotate(0);
+    }
+
+    100% {
+      transform: rotateX(-100deg) rotate(-360deg);
+    }
   }
   // .photoContainer {
   //   display: grid;
@@ -107,12 +141,36 @@ header {
   //   padding: 20px;
   // }
 }
+
 /* ==========================================================================
    SMALLER WINDOW
    ========================================================================== */
 @media screen and (min-width: 641px) and (max-width: 900px) {
   .mainSection {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projectCardContainer {
+    position: relative;
+    width: 38vw;
+    height: 20rem;
+    margin: 0 auto;
+    // background: green;
+  }
+
+  @for $i from 1 through 22 {
+    li:nth-child(#{$i}) {
+      transform: translate(-50%, -50%) rotate(#{$i * 15 - 15}deg) translateY(-250px) rotateX(90deg);
+    }
+  }
+  @keyframes three-dimensions-circle {
+    0% {
+      transform: rotateX(-100deg) rotate(0);
+    }
+
+    100% {
+      transform: rotateX(-100deg) rotate(-360deg);
+    }
   }
   // .photoContainer {
   //   display: grid;
@@ -127,5 +185,27 @@ header {
 @media screen and (min-width: 900px) {
   .mainSection {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .projectCardContainer {
+    position: relative;
+    width: 25vw;
+    height: 20rem;
+    margin: 0 auto;
+    // background: green;
+  }
+  @for $i from 1 through 22 {
+    li:nth-child(#{$i}) {
+      transform: translate(-50%, -50%) rotate(#{$i * 15 - 15}deg) translateY(-350px) rotateX(90deg);
+    }
+  }
+  @keyframes three-dimensions-circle {
+    0% {
+      transform: rotateX(-100deg) rotate(0);
+    }
+
+    100% {
+      transform: rotateX(-100deg) rotate(-360deg);
+    }
   }
 }

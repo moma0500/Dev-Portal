@@ -47,3 +47,19 @@ a:hover {
   font-weight: 700;
   text-decoration: none;
 }
+
+
+ul {
+  margin: 0;
+  list-style: none;
+  font-weight: 300;
+  font-size: 8vw;
+  transform-style: preserve-3d;
+  animation: three-dimensions-circle 15s linear infinite;
+}
+
+li {
+  position: absolute;
+  top: 50%;
+  left: -50%;
+}
