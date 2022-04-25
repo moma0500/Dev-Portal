@@ -71,6 +71,8 @@ main {
   border-radius: 50%;
   display: table;
   text-align: center;
+  transform: rotateY(180deg);
+
   // border: 3px solid black;
 }
 
@@ -86,25 +88,36 @@ main {
   border-radius: 20%;
   backface-visibility: hidden;
   background: $bgYellow;
-  transform: rotateY(180deg);
 }
 
 .thumbnailImage {
-  border: 2px solid black;
+  // border: 2px solid black;
   border-radius: 50px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   margin: 12px;
-  height: 23vh;
+  width: 23vw;
+  height: 10rem;
 }
+
+img {
+  border-radius: 50px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  max-width: 100%;
+  width: 23vw;
+  // height: 14vw;
+  object-fit: cover;
+  object-position: top left;
+}
+
 
 header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 70vh;
   overflow: hidden;
-  // border: 2px solid black;
 }
 // .photoContainer {
 //   display: grid;
@@ -136,10 +149,32 @@ header {
     // background: green;
   }
 
+  .thumbnailImage {
+    // border: 2px solid black;
+    border-radius: 50px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin: 12px;
+    width: 65vw;
+    height: 10rem;
+  }
+
+  img {
+    border-radius: 50px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    max-width: 100%;
+    width: 65vw;
+    // height: 14vw;
+    object-fit: cover;
+    object-position: top left;
+  }
+
   header {
     height: 40vw;
   }
-  @for $i from 1 through 22 {
+
+  @for $i from 1 through 12 {
     li:nth-child(#{$i}) {
       transform: translate(-50%, -50%) rotate(#{$i * 10 - 10}deg) translateY(-150px) rotateX(90deg);
     }
@@ -164,6 +199,28 @@ header {
    SMALLER WINDOW
    ========================================================================== */
 @media screen and (min-width: 641px) and (max-width: 900px) {
+
+  .thumbnailImage {
+    // border: 2px solid black;
+    border-radius: 50px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin: 12px;
+    width: 35vw;
+    height: 10rem;
+  }
+
+  img {
+    border-radius: 50px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    max-width: 100%;
+    width: 35vw;
+    // height: 14vw;
+    object-fit: cover;
+    object-position: top left;
+  }
+
   .mainSection {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -175,7 +232,7 @@ header {
     margin: 0 auto;
     // background: green;
   }
-  @for $i from 1 through 22 {
+  @for $i from 1 through 12 {
     li:nth-child(#{$i}) {
       transform: translate(-50%, -50%) rotate(#{$i * 15 - 15}deg) translateY(-250px) rotateX(90deg);
     }
@@ -211,7 +268,7 @@ header {
     margin: 0 auto;
     // background: green;
   }
-  @for $i from 1 through 22 {
+  @for $i from 1 through 12 {
     li:nth-child(#{$i}) {
       transform: translate(-50%, -50%) rotate(#{$i * 15 - 15}deg) translateY(-350px) rotateX(90deg);
     }
