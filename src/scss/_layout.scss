@@ -69,9 +69,14 @@ main {
   background: $bgNavy;
   border-radius: 1px;
   border-radius: 50%;
-
-
+  display: table;
+  text-align: center;
   // border: 3px solid black;
+}
+
+.projectTitle {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .cardBack {
@@ -87,8 +92,8 @@ main {
 .thumbnailImage {
   border: 2px solid black;
   border-radius: 50px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   margin: 12px;
   height: 23vh;
 }
@@ -134,7 +139,6 @@ header {
   header {
     height: 40vw;
   }
-
   @for $i from 1 through 22 {
     li:nth-child(#{$i}) {
       transform: translate(-50%, -50%) rotate(#{$i * 10 - 10}deg) translateY(-150px) rotateX(90deg);
