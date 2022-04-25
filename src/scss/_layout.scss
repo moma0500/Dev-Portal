@@ -23,6 +23,7 @@ nav {
   // background: green;
 }
 
+
 main {
   // background: purple;
   // max-height: 100%;
@@ -36,6 +37,16 @@ main {
   height: 85vw;
   display: grid;
   grid-gap: 1rem;
+}
+
+.myName {
+  postion: relative;
+  text-align: center;
+  padding-top: 50px;
+  // border: 1px solid black;
+  font-weight: 100;
+  letter-spacing: 20px;
+
 }
 //entire card object
 
@@ -132,8 +143,10 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: 50vh;
   overflow: hidden;
+  padding-bottom: 160px;
+  // border: 1px solid green;
 }
 // .photoContainer {
 //   display: grid;
@@ -185,9 +198,10 @@ header {
     object-position: top left;
   }
 
-  header {
-    height: 40vw;
-  }
+  // header {
+  //
+  //   height: 40vw;
+  // }
   @for $i from 1 through 12 {
     li:nth-child(#{$i}) {
       transform: translate(-50%, -50%) rotate(#{$i * 10 - 10}deg) translateY(-150px) rotateX(90deg);
