@@ -35,6 +35,7 @@ h4 {
 p {
   color: $bgNavy;
   font-weight: 200;
+  font-size: 14px;
 }
 
 a {
@@ -65,4 +66,19 @@ li {
   left: -50%;
   text-shadow: 5px 5px rgba(150,150,150,.5);
 
+}
+
+button {
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+  width: 13vw;
+  background: $bgBlue;
+  color: $bgNavy;
+// border: 2px solid green;
+}
+
+button:hover {
+  background: $bgNavy;
+  color: $bgBlue;
 }

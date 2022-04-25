@@ -33,7 +33,7 @@ main {
   // border: 3px solid orange;
   max-width: 1200px;
   margin: auto;
-  height: 75vw;
+  height: 85vw;
   display: grid;
   grid-gap: 1rem;
 }
@@ -42,7 +42,7 @@ main {
 .projectCardContainer {
   position: relative;
   width: 30vw;
-  height: 10rem;
+  height: 15rem;
   margin: 0 auto;
   // background: green;
 }
@@ -71,8 +71,6 @@ main {
   border-radius: 50%;
   display: table;
   text-align: center;
-  transform: rotateY(180deg);
-
   // border: 3px solid black;
 }
 
@@ -88,6 +86,7 @@ main {
   border-radius: 20%;
   backface-visibility: hidden;
   background: $bgYellow;
+  transform: rotateY(180deg);
 }
 
 .thumbnailImage {
@@ -113,17 +112,16 @@ img {
 
 .projectDescription {
   position: absolute;
-  border: 1px solid green;
+  // border: 1px solid green;
   padding-top: 3px;
   padding-left: 10px;
   padding-right: 10px;
   text-align: center;
-
 }
 
-// .projectDescriptionHeader {
-//
-// }
+.projectDescriptionHeader {
+  margin-top: -5px;
+}
 
 .projectDescriptionText {
   // border: 1px solid pink;
@@ -162,7 +160,7 @@ header {
   .projectCardContainer {
     position: relative;
     width: 70vw;
-    height: 20rem;
+    height: 24rem;
     margin: 0 auto;
     // background: green;
   }
@@ -190,7 +188,6 @@ header {
   header {
     height: 40vw;
   }
-
   @for $i from 1 through 12 {
     li:nth-child(#{$i}) {
       transform: translate(-50%, -50%) rotate(#{$i * 10 - 10}deg) translateY(-150px) rotateX(90deg);
@@ -216,7 +213,6 @@ header {
    SMALLER WINDOW
    ========================================================================== */
 @media screen and (min-width: 641px) and (max-width: 900px) {
-
   .thumbnailImage {
     // border: 2px solid black;
     border-radius: 50px;
@@ -244,7 +240,7 @@ header {
   .projectCardContainer {
     position: relative;
     width: 38vw;
-    height: 20rem;
+    height: 22rem;
     margin: 0 auto;
     // background: green;
   }
@@ -280,7 +276,7 @@ header {
   .projectCardContainer {
     position: relative;
     width: 25vw;
-    height: 20rem;
+    height: 22rem;
     margin: 0 auto;
     // background: green;
   }
